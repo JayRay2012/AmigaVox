@@ -1,15 +1,12 @@
 import pvporcupine
 import pyaudio
 import struct
-#import openai  # Uncomment later when adding AI response
-#import whisper  # Uncomment later when adding transcription
+# import openai  # Uncomment later when adding AI response
 
-# CONFIGURATION
-TRIGGER_WORD = "over"  # You can change this later
-BUFFER_SECONDS = 10
-
-# Initialize Porcupine (Trigger word detector)
-porcupine = pvporcupine.create(keywords=["over"])  # You can try "go", "jarvis", etc
+porcupine = pvporcupine.create(
+    access_key="jLdg8v42arQZ16gzuY3Ja4opPwcGC083XoqpCGGqujrtV0FNezRlWQ==",
+    keywords=["over"]
+)
 
 # Initialize PyAudio
 pa = pyaudio.PyAudio()
@@ -43,4 +40,3 @@ finally:
     stream.close()
     porcupine.delete()
     pa.terminate()
-
