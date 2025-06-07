@@ -1,1 +1,7 @@
+pyaudio
+openai
+whisper
+pvporcupine
+sounddevice
+numpy
 
